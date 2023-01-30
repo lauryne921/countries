@@ -1,0 +1,208 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@200;300;400;500&display=swap');
+
+:root {
+    --dark-blue: hsl(209, 23%, 22%);
+    --very-dark-blue-bg: hsl(207, 26%, 17%); 
+    --very-dark-blue-text: hsl(200, 15%, 8%); 
+    --dark-gray: hsl(0, 0%, 52%);
+    --very-light-gray: hsl(0, 0%, 98%); 
+}
+
+body {
+    background-color: var(--very-light-gray);
+    color: var(--very-dark-blue-text);
+    font-family: 'Montserrat', sans-serif;
+    padding: 0;
+    margin: 0;
+}
+
+body.active {
+    background-color: var(--very-dark-blue-bg);
+    color: white;
+}
+
+header {
+    padding: 1.5% 5% 1.5% 5%;
+    background-color: white;
+    box-shadow: 0 2px 10px hsl(0, 0%, 87%);
+}
+header.active {
+    background-color: var(--dark-blue);
+    box-shadow: 0 2px 10px hsl(210, 32%, 12%);
+}
+
+h1 {
+    margin: 0;
+}
+
+.toggle-mode {
+    display: flex;
+    cursor: pointer;
+    float: right;
+    margin-top: -3rem;
+}
+
+.emoji {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-right: 1rem;
+}
+
+main {
+    padding: 3.5rem 5rem;
+}
+
+.search-container {
+    display: flex;
+    justify-content: space-between;
+}
+
+#search-bar {
+    border: none;
+    background-color: white;
+    box-shadow: 0 2px 10px hsl(0, 0%, 87%);
+    border-radius: 5px;
+    padding: 15px 15px 15px 70px;
+    width: 28rem;
+    background-image: url(../search-gray.png);
+    background-position: 5%;
+    background-size: 20px;
+    background-repeat: no-repeat;
+}
+#search-bar.active {
+    background-color: var(--dark-blue);
+    color: white;
+    box-shadow: 0 2px 10px hsl(210, 32%, 12%);
+    background-image: url(../search-white.png);
+}
+
+select {
+    border: none;
+    background-color: white;
+    box-shadow: 0 2px 10px hsl(0, 0%, 87%);
+    padding: 15px 20px;
+    border-radius: 5px;
+}
+select.active {
+    background-color: var(--dark-blue);
+    box-shadow: 0 2px 10px hsl(210, 32%, 12%);
+    color: white;
+}
+
+.wrapper {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-gap: 4rem;
+    margin-top: 2rem;
+}
+
+/*.country-card {
+    height: 14rem;
+    width: 17rem;
+    box-shadow: 0 2px 10px hsl(0, 0%, 87%);
+    background-color: white;
+    color: var(--very-dark-blue-text);
+    border-radius: 5px; 
+}
+
+.country-name {
+    margin: 1rem 1rem 1.5rem 1rem;
+    font-weight: bold;
+}*/
+
+.information {
+    margin: 0 1rem 0.5rem 1rem;
+}
+
+.card {
+    height: 22rem;
+    width: 17rem;
+    box-shadow: 0 2px 10px hsl(0, 0%, 87%);
+    background-color: white;
+    color: var(--very-dark-blue-text);
+    border-radius: 5px;
+}
+.card.active {
+    background-color: var(--dark-blue);
+    box-shadow: 0 2px 10px hsl(210, 32%, 12%);
+    color: white;
+}
+.card:hover {
+    transform: scale(1.05);
+    cursor: pointer; 
+}
+
+.flag {
+    height: 9rem;
+    justify-content: center;
+    display: flex;
+}
+
+.country {
+    margin: 1.5rem 1rem 1.5rem 1rem;
+    font-size: 1.25rem;
+    font-weight: bold;
+}
+
+.hide {
+    display: none;
+}
+
+
+
+@media screen and (max-width: 1080px) {
+    .wrapper {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+
+
+@media screen and (max-width: 750px) {
+    .wrapper {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+
+
+@media screen and (max-width: 450px) {
+    header {
+        padding: 3% 5%;
+    }
+    
+    h1 {
+        font-size: 20px;
+    }
+    
+    .toggle-mode {
+        margin-top: -2.5rem;
+    }
+    
+    main {
+        padding: 1rem 2.5rem;
+    }
+    
+    .search-container {
+        display: flex;
+        flex-direction: column;
+    }
+    
+    #search-bar {
+        padding: 15px 15px 15px 70px;
+        width: 22rem;
+    }
+    
+    select {
+        margin-top: 2rem;
+    }
+    
+    .wrapper {
+        grid-template-columns: 1fr;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+}

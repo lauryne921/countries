@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/generic.css">
+    <link rel="stylesheet" href="../css/africa.css">
+    <title>Drapeau</title>
+</head>
+<body>
+    <header>
+        <h1>Where in the world ?</h1>
+        <nav>
+            <div class="toggle-mode">
+                <div class="emoji">🌘</div>
+                <p>Dark Mode</p>
+            </div>
+        </nav>
+    </header>
+    <main>
+        <h2>Africa</h2>
+        <div class="search-container">
+            <form>
+                <input type="search" name="" id="search-bar" placeholder="Search for a country ...">
+            </form>
+            <div>
+                <select id="select-continent">
+                    <option value="">Filter by Region</option>
+                    <option value="all">All</option>
+                    <option value="africa">Africa</option>
+                    <option value="americas">Americas</option>
+                    <option value="antarctic">Antarctic</option>
+                    <option value="asia">Asia</option>
+                    <option value="europe">Europe</option>
+                    <option value="oceania">Oceania</option>
+                </select>
+            </div>
+        </div>
+        <!--<div class="wrapper"></div>-->
+        <div class="wrapper" data-countries-cards-container></div>
+        <template data-countries-template>
+            <div class="card">
+                <div class="flag" data-flag></div>
+                <div class="country" data-country></div>
+                <div>
+                    <div class="population information"></div>
+                    <div class="region information"></div>
+                    <div class="capital information"></div>
+                </div>
+            </div>
+        </template>
+    </main>
+    <script src="../js/toggle.js"></script>
+    <script src="../js/generic.js"></script>
+    <script src="../js/africa.js"></script>
+</body>
+</html>
