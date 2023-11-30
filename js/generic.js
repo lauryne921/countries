@@ -7,54 +7,6 @@ document.getElementById('select-continent').addEventListener('change', (event) =
 });
 
 
-
-
-/*function appendElement(divParent, containerName, apiElement) {
-    divParent.appendChild(containerName); 
-    containerName.append(apiElement); 
-}*/
-
-/*function addClasslist(containerName) {
-    containerName.classList.add('information');
-}*/
-
-
-/*function displayCountries(continent) {
-    fetch('https://restcountries.com/v3.1/all')
-    .then(reponse => reponse.json())
-    .then(data => {
-        const countries = data.filter(country => country.region === continent);
-        countries.forEach(country => {
-            const wrapper = document.querySelector('.wrapper'); 
-            const container = document.createElement('div'); 
-            container.classList.add('country-card');
-
-            const flagCountry = document.createElement('div'); 
-            wrapper.appendChild(container);
-            container.appendChild(flagCountry);
-            appendElement(container, flagCountry, country.flag); 
-            flagCountry.classList.add('flag');
-
-            const nameCountry = document.createElement('div'); 
-            appendElement(container, nameCountry, country.name.common); 
-            nameCountry.classList.add('country-name'); 
-
-            const populationCountry = document.createElement('div'); 
-            appendElement(container, populationCountry, 'Population : ' + country.population); 
-            addClasslist(populationCountry);
-
-            const regionCountry = document.createElement('div'); 
-            appendElement(container, regionCountry, 'Region : ' + country.region); 
-            addClasslist(regionCountry);
-
-            const capitalCountry = document.createElement('div'); 
-            appendElement(container, capitalCountry, 'Capital : ' + country.capital); 
-            addClasslist(capitalCountry); 
-        });
-    }); 
-} */ 
-
-
 let countries = [];
 
 
